@@ -7,12 +7,18 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("gra za dużo za malo");
-            //1. komputer losuje
 
-            Random los = new Random(); //tworze obiekt typu random
+            //1. komputer losuje
+            #region losowanie //dodanie zwijania częsci 
+            var los = new Random(); //tworze obiekt typu random
             int wylosowana = los.Next(1, 100 + 1);
+#if DEBUG
+
             Console.WriteLine(wylosowana);
-            Console.WriteLine("wylosowalem liczbe od 1 do 100. \nOdgadnij ja.");  // \n przerzuca do kolejnej linii reszte tekstu
+#endif   
+            Console.WriteLine("wylosowalem liczbe od 1 do 100. \nOdgadnij ja.");  // \n przerzuca do kolejnej linii reszte tekstu taki enter
+            #endregion
+
 
             //dopóki nie odgadniete
             bool odgadniete = false;
